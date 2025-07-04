@@ -1,7 +1,7 @@
 // --- 1. STATE & CONFIG ---
 
 const i18n = {
-    appTitle: { vi: 'Báo giá dịch vụ', en: 'Quotation Services' },
+    appTitle: { vi: 'Báo giá dịch vụ', en: 'Services Quotation' },
     developedBy: { vi: 'Phát triển bởi: Tiền/Cảng Tân Thuận', en: 'Developed by: Tien/Tan Thuan Port' },
     manageServices: { vi: 'Phương án (Tariff)', en: 'Manage Services (Tariff)' },
     history: { vi: 'Lịch sử báo giá', en: 'Quotation History' },
