@@ -67,6 +67,13 @@ body {
     cursor: pointer; 
 }
 
+/* [CẢI TIẾN] Thêm class để làm nổi bật input lỗi */
+.input-error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 1px #dc3545 !important;
+}
+
+
 @media print { 
     body * { visibility: hidden; } 
     #a4-content-wrapper, #a4-content-wrapper * { visibility: visible; } 
