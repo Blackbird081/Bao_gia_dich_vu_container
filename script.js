@@ -1,11 +1,15 @@
+// --- PHIÊN BẢN CUỐI CÙNG - V1.4 
+
 // --- 1. STATE & CONFIG ---
+const staticQrCode = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAYHCAUEAwL/xAAyEAABAwMCAwUGBwAAAAAAAAABAgMEAAUGBxESIQgTMRQiMkFRYXEVFiQzNEJygZGx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAfEQEAAgICAwEBAAAAAAAAAAAAAQIDERIhMQRBYVH/2gAMAwEAAhEDEQA/APcUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/Z";
+const PLACEHOLDER_IMAGE = 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7';
 
 const i18n = {
-    appTitle: { vi: 'Báo giá dịch vụ', en: 'Services Quotation' },
+    appTitle: { vi: 'Báo giá dịch vụ', en: 'Service Quotation' },
     developedBy: { vi: 'Phát triển bởi: Tiền/Cảng Tân Thuận', en: 'Developed by: Tien/Tan Thuan Port' },
     manageServices: { vi: 'Phương án (Tariff)', en: 'Manage Services (Tariff)' },
     history: { vi: 'Lịch sử báo giá', en: 'Quotation History' },
-    formTitle: { vi: 'Thông tin báo giá', en: 'Quotation Information' },
+    formTitle: { vi: 'Thông tin chung', en: 'Informations' },
     quoteNo: { vi: 'Số báo giá', en: 'Quotation No.' },
     quoteDate: { vi: 'Ngày báo giá', en: 'Date' },
     customerName: { vi: 'Tên khách hàng', en: 'Customer Name' },
@@ -22,7 +26,7 @@ const i18n = {
     actionsTitle: { vi: 'Xem trước', en: 'Preview' },
     newQuote: { vi: 'Tạo mới', en: 'New' },
     saveQuote: { vi: 'Lưu báo giá', en: 'Save Quotation' },
-    updatePreview: { vi: 'Cập nhật', en: 'Update' },
+    updatePreview: { vi: 'Cập nhật', en: 'Update Preview' },
     printPdf: { vi: 'In / Xuất PDF', en: 'Print / Export PDF' },
     previewPlaceholder: { vi: 'Bản xem trước (A4)', en: 'A4 preview' },
     modalProductTitle: { vi: 'Quản lý phương án (Tariff)', en: 'Manage Services (Tariff)' },
@@ -33,8 +37,8 @@ const i18n = {
     modalPrice: { vi: 'Đơn giá', en: 'Price' },
     btnModalSave: { vi: 'Lưu', en: 'Save' },
     btnCancel: { vi: 'Hủy', en: 'Cancel' },
-    modalHistoryTitle: { vi: 'Dữ liệu', en: 'Quotation Data' },
-    action: { vi: 'Phương án', en: 'Services' },
+    modalHistoryTitle: { vi: 'Dữ liệu báo giá', en: 'Quotation Data' },
+    action: { vi: 'Hành động', en: 'Action' },
     date: { vi: 'Ngày', en: 'Date' },
     customer: { vi: 'Khách hàng', en: 'Customer' },
     view: { vi: 'Xem', en: 'View' },
@@ -54,8 +58,12 @@ const i18n = {
     toastTariffUpdated: { vi: 'Danh sách phương án (Tariff) đã được cập nhật.', en: 'Service list (Tariff) has been updated.' },
     toastExportSuccess: { vi: 'Đã xuất file Excel thành công!', en: 'Excel file exported successfully!' },
     toastError: { vi: 'Có lỗi xảy ra. Vui lòng thử lại.', en: 'An error occurred. Please try again.' },
-    toastNoCustomer: { vi: 'Vui lòng nhập Tên khách hàng.', en: 'Please enter a customer name.' },
+    toastValidationError: { vi: 'Vui lòng kiểm tra các trường sau: {fields}', en: 'Please check the following fields: {fields}'},
+    toastNoCustomer: { vi: 'Tên khách hàng', en: 'Customer Name' },
+    toastNoQuoteNo: { vi: 'Số báo giá', en: 'Quotation No.' },
+    toastInvalidDate: { vi: 'Ngày báo giá', en: 'Quotation Date' },
     toastNoItems: { vi: 'Báo giá phải có ít nhất một phương án.', en: 'Quotation must have at least one service item.' },
+    toastImportNoData: { vi: 'Không tìm thấy dữ liệu trong file Excel.', en: 'No data found in the Excel file.'},
     pdf: {
         companyName: { vi: 'TTĐH KHAI THÁC TÂN THUẬN', en: 'TAN THUAN OPERATIONS CENTER' },
         companyAddress: { vi: 'Địa chỉ: 18B Lưu Trọng Lư, Phường Tân Thuận, TP. HCM', en: 'Address: 18B Luu Trong Lu, Tan Thuan Ward, Ho Chi Minh City' },
@@ -65,7 +73,6 @@ const i18n = {
         quoteNo: { vi: 'Số', en: 'No.' },
         date: { vi: 'Ngày', en: 'Date' },
         title: { vi: 'BÁO GIÁ', en: 'QUOTATION' },
-        // [CHANGE] Thêm dòng dịch cho ghi chú VAT
         vatIncluded: { vi: '(Đã bao gồm 8% thuế VAT)', en: '(Includes 8% VAT)' },
         customerName: { vi: 'Tên khách hàng', en: 'Customer Name' },
         notes: { vi: 'Ghi chú', en: 'Notes' },
@@ -81,7 +88,7 @@ const i18n = {
         bank: { vi: 'Ngân hàng', en: 'Bank' },
         accountName: { vi: 'Tên tài khoản', en: 'Account Name' },
         accountNumber: { vi: 'Số tài khoản', en: 'Account Number' },
-        taxNote: { vi: 'QUÝ CÔNG TY VUI LÒNG CUNG CẤP MÃ SỐ THUẾ, ĐỊA CHỈ VÀ EMAIL ĐỂ NHẬN HÓA ĐƠN.', en: 'PLEASE PROVIDE YOUR TAX CODE, ADDRESS AND EMAIL TO RECEIVE THE INVOICE.' },
+        taxNote: { vi: 'QUÝ KHÁCH HÀNG VUI LÒNG CUNG CẤP MÃ SỐ THUẾ, ĐỊA CHỈ VÀ EMAIL ĐỂ NHẬN HÓA ĐƠN.', en: 'PLEASE PROVIDE YOUR TAX CODE, ADDRESS AND EMAIL TO RECEIVE THE INVOICE.' },
         otherOptionNote: { vi: '(Chi tiết trong Ghi chú)', en: '(Details in Notes)' }
     }
 };
@@ -91,8 +98,6 @@ const state = {
     products: [],
     rawTotalAmount: 0,
 };
-
-const staticQrCode = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCAAoACgDASIAAhEBAxEB/8QAGwABAAMBAQEBAAAAAAAAAAAAAAYHCAUEAwL/xAAyEAABAwMCAwUGBwAAAAAAAAABAgMEAAUGBxESIQgTMRQiMkFRYXEVFiQzNEJygZGx/8QAGAEBAQEBAQAAAAAAAAAAAAAAAAECAwT/xAAfEQEAAgICAwEBAAAAAAAAAAAAAQIDERIhMQRBYVH/2gAMAwEAAhEDEQA/APcUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgFKUoBSlKAUpSgP/Z";
 
 // --- 2. DOM ELEMENTS ---
 const elements = {
@@ -168,7 +173,10 @@ const elements = {
 // --- 3. UTILITY FUNCTIONS ---
 const formatCurrency = (amount) => new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(amount);
 const showToast = (message, type = 'success') => { elements.toast.textContent = message; elements.toast.className = `show ${type}`; setTimeout(() => { elements.toast.classList.remove('show'); }, 3000); };
-function numberToWords_VI(n) { if (n === undefined || n === null || isNaN(n) || n === 0) return "Không"; const units = ["", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"], teens = ["mười", "mười một", "mười hai", "mười ba", "mười bốn", "mười lăm", "mười sáu", "mười bảy", "mười tám", "mười chín"], tens = ["", "mười", "hai mươi", "ba mươi", "bốn mươi", "năm mươi", "sáu mươi", "bảy mươi", "tám mươi", "chín mươi"], powersOfTen = ["", "nghìn", "triệu", "tỷ"]; function convertChunk(num) { let str = "", h = Math.floor(num / 100), t = Math.floor((num % 100) / 10), u = num % 10; if (h > 0) str += units[h] + " trăm "; if (t === 1) str += teens[u] + " "; else if (t > 1) { str += tens[t] + " "; if (u === 1) str += "mốt "; else if (u > 0) str += units[u] + " "; } else if (u > 0) { if (h > 0) str += "linh "; str += units[u] + " "; } return str.trim(); } function convertInteger(num) { if (num === 0) return "không"; if (num < 0) return "âm " + convertInteger(Math.abs(num)); let word = "", i = 0, tempNum = num; while (tempNum > 0) { if (tempNum % 1000 !== 0) { const chunkWord = convertChunk(tempNum % 1000); if (chunkWord) word = chunkWord + " " + powersOfTen[i] + " " + word; } tempNum = Math.floor(tempNum / 1000); i++; } return word.trim(); } const integerPart = Math.trunc(n); let integerWords = convertInteger(integerPart); return integerWords.charAt(0).toUpperCase() + integerWords.slice(1); }
+const debounce = (func, delay) => { let timeout; return (...args) => { clearTimeout(timeout); timeout = setTimeout(() => func.apply(this, args), delay); }; };
+const showModal = (modalElement) => { modalElement.style.display = 'block'; };
+const hideModal = (modalElement) => { modalElement.style.display = 'none'; };
+function numberToWords_VI(n) { if (n === undefined || n === null || isNaN(n) || n === 0) return "Không"; const units = ["", "một", "hai", "ba", "bốn", "năm", "sáu", "bảy", "tám", "chín"], teens = ["mười", "mười một", "mười hai", "mười ba", "mười bốn", "mười lăm", "mười sáu", "mười bảy", "mười tám", "mười chín"], tens = ["", "mười", "hai mươi", "ba mươi", "bốn mươi", "năm mươi", "sáu mươi", "bảy mươi", "tám mươi", "chín mươi"], powersOfTen = ["", "ngàn", "triệu", "tỷ"]; function convertChunk(num) { let str = "", h = Math.floor(num / 100), t = Math.floor((num % 100) / 10), u = num % 10; if (h > 0) str += units[h] + " trăm "; if (t === 1) str += teens[u] + " "; else if (t > 1) { str += tens[t] + " "; if (u === 1) str += "mốt "; else if (u > 0) str += units[u] + " "; } else if (u > 0) { if (h > 0) str += "lẻ "; str += units[u] + " "; } return str.trim(); } function convertInteger(num) { if (num === 0) return "không"; if (num < 0) return "âm " + convertInteger(Math.abs(num)); let word = "", i = 0, tempNum = num; while (tempNum > 0) { if (tempNum % 1000 !== 0) { const chunkWord = convertChunk(tempNum % 1000); if (chunkWord) word = chunkWord + " " + powersOfTen[i] + " " + word; } tempNum = Math.floor(tempNum / 1000); i++; } return word.trim(); } const integerPart = Math.trunc(n); let integerWords = convertInteger(integerPart); return integerWords.charAt(0).toUpperCase() + integerWords.slice(1); }
 function numberToWords_EN(n) { if (n === 0) return 'Zero'; const below_20 = ['','One','Two','Three','Four','Five','Six','Seven','Eight','Nine','Ten','Eleven','Twelve','Thirteen','Fourteen','Fifteen','Sixteen','Seventeen','Eighteen','Nineteen']; const tens = ['','','Twenty','Thirty','Forty','Fifty','Sixty','Seventy','Eighty','Ninety']; const thousands = ['','Thousand','Million','Billion']; function helper(num) { if (num === 0) return ''; if (num < 20) return below_20[num] + ' '; if (num < 100) return tens[Math.floor(num/10)] + ' ' + helper(num % 10); return below_20[Math.floor(num/100)] + ' Hundred ' + helper(num % 100); } let word = ''; let i = 0; while (n > 0) { if (n % 1000 !== 0) { word = helper(n % 1000) + thousands[i] + ' ' + word; } n = Math.floor(n / 1000); i++; } return word.trim(); }
 
 // --- 4. UI UPDATE FUNCTIONS ---
@@ -210,7 +218,7 @@ function resetForm(confirmNeeded = true) {
     const doReset = () => {
         elements.customerName.value = ''; elements.customerAddress.value = ''; elements.customerPhone.value = ''; elements.customerNotes.value = '';
         elements.tableBody.innerHTML = '';
-        init(false); // Re-init without full translation and event binding
+        init(false);
         showToast(i18n.toastNewQuote[state.currentLang], 'info');
     };
     if (confirmNeeded) {
@@ -312,20 +320,62 @@ function loadProducts() {
     }
 }
 
-function saveQuotation() { 
-    if (!elements.customerName.value.trim()) { showToast(i18n.toastNoCustomer[state.currentLang], 'error'); return; } 
-    const items = []; 
-    elements.tableBody.querySelectorAll('.item-row').forEach(row => { 
-        const name = row.querySelector('.product-select').value; 
-        if (name) { items.push({ name: name, quantity: row.querySelector('.qty-input').value, price: row.querySelector('.price-input').value }); } 
-    }); 
-    if (items.length === 0) { showToast(i18n.toastNoItems[state.currentLang], 'error'); return; } 
-    const quotationId = `QT-${Date.now()}`; 
-    const newQuotation = { id: quotationId, invoiceNumber: elements.invoiceNumber.value, invoiceDate: elements.invoiceDate.value, customerName: elements.customerName.value, customerAddress: elements.customerAddress.value, customerPhone: elements.customerPhone.value, customerNotes: elements.customerNotes.value, totalAmount: elements.totalAmount.textContent, items: items }; 
-    let savedQuotations = JSON.parse(localStorage.getItem(`tanthuan_quotations_${state.currentLang}`)) || []; 
-    savedQuotations.push(newQuotation); 
-    localStorage.setItem(`tanthuan_quotations_${state.currentLang}`, JSON.stringify(savedQuotations)); 
-    showToast(i18n.toastSaveSuccess[state.currentLang].replace('{name}', newQuotation.customerName)); 
+function validateForm() {
+    const errors = [];
+    const fieldsToValidate = [
+        { element: elements.customerName, errorKey: 'toastNoCustomer' },
+        { element: elements.invoiceNumber, errorKey: 'toastNoQuoteNo' },
+        { element: elements.invoiceDate, errorKey: 'toastInvalidDate', validator: (el) => el.value && new Date(el.value) <= new Date() }
+    ];
+
+    fieldsToValidate.forEach(field => field.element.classList.remove('input-error'));
+
+    fieldsToValidate.forEach(field => {
+        const isValid = field.validator ? field.validator(field.element) : field.element.value.trim() !== '';
+        if (!isValid) {
+            errors.push(i18n[field.errorKey][state.currentLang]);
+            field.element.classList.add('input-error');
+        }
+    });
+
+    const hasItems = Array.from(elements.tableBody.querySelectorAll('.item-row')).some(row => row.querySelector('.product-select').value);
+    if (!hasItems) {
+        errors.push(i18n.toastNoItems[state.currentLang]);
+    }
+
+    if (errors.length > 0) {
+        const errorMessage = i18n.toastValidationError[state.currentLang].replace('{fields}', errors.join(', '));
+        showToast(errorMessage, 'error');
+        return false;
+    }
+
+    return true;
+}
+
+function saveQuotation() {
+    if (!validateForm()) return;
+
+    const newQuotation = {
+        id: `QT-${Date.now()}`,
+        invoiceNumber: elements.invoiceNumber.value,
+        invoiceDate: elements.invoiceDate.value,
+        customerName: elements.customerName.value,
+        customerAddress: elements.customerAddress.value,
+        customerPhone: elements.customerPhone.value,
+        customerNotes: elements.customerNotes.value,
+        totalAmount: elements.totalAmount.textContent,
+        items: Array.from(elements.tableBody.querySelectorAll('.item-row')).map(row => ({
+            name: row.querySelector('.product-select').value,
+            quantity: row.querySelector('.qty-input').value,
+            price: row.querySelector('.price-input').value
+        })).filter(item => item.name)
+    };
+
+    let savedQuotations = JSON.parse(localStorage.getItem(`tanthuan_quotations_${state.currentLang}`)) || [];
+    savedQuotations.push(newQuotation);
+    localStorage.setItem(`tanthuan_quotations_${state.currentLang}`, JSON.stringify(savedQuotations));
+
+    showToast(i18n.toastSaveSuccess[state.currentLang].replace('{name}', newQuotation.customerName));
 }
 
 function loadQuotation(id) { 
@@ -380,6 +430,16 @@ function generateNextQuoteNumber() {
 }
 
 // --- 6. PDF & PREVIEW GENERATION ---
+function waitForImageLoad(imageElement) {
+    return new Promise((resolve, reject) => {
+        if (imageElement.complete && imageElement.naturalHeight !== 0) {
+            return resolve();
+        }
+        imageElement.onload = () => resolve();
+        imageElement.onerror = (err) => reject(err);
+    });
+}
+
 function generateA4HTML(qrCodeBase64) {
     const invoiceDate = new Date(elements.invoiceDate.value).toLocaleDateString(state.currentLang === 'vi' ? 'vi-VN' : 'en-GB');
     let itemsHTML = '';
@@ -425,7 +485,7 @@ function generateA4HTML(qrCodeBase64) {
                     </td>
                 </tr>
             </table>
-
+            
             <div style="text-align: center; margin-bottom: 2rem;">
                 <h1 style="font-size: 2.25rem; font-weight: 700; margin-bottom: 0;">${pdfText.title[state.currentLang]}</h1>
                 <p style="font-size: 11pt; font-style: italic; margin-top: 4px;">${pdfText.vatIncluded[state.currentLang]}</p>
@@ -465,17 +525,22 @@ function generateA4HTML(qrCodeBase64) {
                 </tr>
             </table>
 
-            <table style="width: 100%; border-collapse: collapse; margin-top: 4rem; border-top: 1px solid #ccc; padding-top: 1rem;"><tr><td style="width: 70%; border: none; vertical-align: top;"><h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">${pdfText.paymentInfo[state.currentLang]}</h4><p style="margin: 0; font-size: 11pt;">${pdfText.bank[state.currentLang]}: <strong>BIDV - Chau Thanh Sai Gon Branch</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountName[state.currentLang]}: <strong>CONG TY CO PHAN CANG SAI GON</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountNumber[state.currentLang]}: <strong style="color: #d0021b !important;">8608393979</strong></p><p style="margin-top: 2rem; font-size: 0.875rem; font-style: italic;">${pdfText.taxNote[state.currentLang]}</p></td><td style="width: 30%; border: none; text-align: right; vertical-align: top;"><img src="${qrCodeBase64}" alt="QR Code" style="width: 120px; height: 120px; display: inline-block;"></td></tr></table>
+            <table style="width: 100%; border-collapse: collapse; margin-top: 4rem; border-top: 1px solid #ccc; padding-top: 1rem;"><tr><td style="width: 70%; border: none; vertical-align: top;"><h4 style="font-weight: 700; font-size: 1rem; margin-bottom: 0.5rem;">${pdfText.paymentInfo[state.currentLang]}</h4><p style="margin: 0; font-size: 11pt;">${pdfText.bank[state.currentLang]}: <strong>BIDV - Chau Thanh Sai Gon Branch</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountName[state.currentLang]}: <strong>CONG TY CO PHAN CANG SAI GON</strong></p><p style="margin: 0; font-size: 11pt;">${pdfText.accountNumber[state.currentLang]}: <strong style="color: #d0021b !important;">8608393979</strong></p><p style="margin-top: 2rem; font-size: 0.875rem; font-style: italic;">${pdfText.taxNote[state.currentLang]}</p></td><td style="width: 30%; border: none; text-align: right; vertical-align: top;"><img src="${qrCodeBase64}" alt="QR Code" style="width: 120px; height: 120px; display: inline-block;" id="qr-code-image"></td></tr></table>
         </div>
     `;
 }
 
 async function getDynamicQrCodeBase64(amount, description) {
-    if (amount <= 0) return staticQrCode;
+    // [SỬA LỖI] Quay lại phương án dùng API ngoài để đảm bảo ổn định
+    if (amount <= 0) {
+        return staticQrCode;
+    }
     const vietQR_URL = `https://api.vietqr.io/image/970418-8608393979-compact2.jpg?accountName=CONG%20TY%20CO%20PHAN%20CANG%20SAI%20GON&amount=${amount}&addInfo=${encodeURIComponent(description)}`;
     try {
         const response = await fetch(vietQR_URL);
-        if (!response.ok) throw new Error('Network response was not ok.');
+        if (!response.ok) {
+            throw new Error('Network response was not ok.');
+        }
         const blob = await response.blob();
         return new Promise((resolve, reject) => {
             const reader = new FileReader();
@@ -490,51 +555,81 @@ async function getDynamicQrCodeBase64(amount, description) {
 }
 
 async function renderPreviewToCanvas() { 
-    const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
-    elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
-    elements.a4ContentWrapper.style.fontFamily = 'Arial, sans-serif'; 
+    if (!validateForm()) return;
     showToast(i18n.updatePreview[state.currentLang], 'info'); 
-    try { 
-        const canvas = await html2canvas(elements.a4ContentWrapper, { scale: 2, useCORS: true }); 
+    try {
+        const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
+        elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
+        
+        const qrImage = document.getElementById('qr-code-image');
+        await Promise.all([
+            waitForImageLoad(qrImage),
+            document.fonts.ready
+        ]);
+
+        const canvas = await html2canvas(elements.a4ContentWrapper, { 
+            scale: 2.0,
+            useCORS: true,
+            scrollX: 0,
+            scrollY: 0,
+            windowWidth: elements.a4ContentWrapper.scrollWidth,
+            windowHeight: elements.a4ContentWrapper.scrollHeight
+        }); 
         const a4Ratio = 297 / 210; 
         elements.previewCanvas.width = canvas.width; 
         elements.previewCanvas.height = canvas.height; 
         elements.previewCanvas.style.height = (elements.previewCanvas.clientWidth * a4Ratio) + 'px'; 
         const ctx = elements.previewCanvas.getContext('2d'); 
         ctx.drawImage(canvas, 0, 0, elements.previewCanvas.width, elements.previewCanvas.height); 
-        showToast(i18n.updatePreview[state.currentLang]); 
+        showToast(i18n.updatePreview[state.currentLang]);
     } catch (error) { 
         showToast('Error creating preview. Check Console (F12).', 'error'); 
         console.error("html2canvas error (Preview):", error); 
-    } finally { 
-        elements.a4ContentWrapper.style.fontFamily = ''; 
     } 
 }
 
-async function generatePdf() { 
+async function generatePdf() {
+    if (!validateForm()) return;
+    
     elements.generatePdfBtn.disabled = true; 
     elements.generatePdfBtn.textContent = 'Processing...'; 
     showToast('Preparing PDF...', 'info'); 
-    const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
-    elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
-    elements.a4ContentWrapper.style.fontFamily = 'Arial, sans-serif'; 
-    const { jsPDF } = window.jspdf; 
-    const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' }); 
+    
     try { 
-        const canvas = await html2canvas(elements.a4ContentWrapper, { scale: 3, useCORS: true }); 
-        const imgData = canvas.toDataURL('image/png'); 
+        const qrCodeBase64 = await getDynamicQrCodeBase64(state.rawTotalAmount, elements.invoiceNumber.value); 
+        elements.a4ContentWrapper.innerHTML = generateA4HTML(qrCodeBase64); 
+        
+        const qrImage = document.getElementById('qr-code-image');
+        await Promise.all([
+            waitForImageLoad(qrImage),
+            document.fonts.ready
+        ]);
+
+        const { jsPDF } = window.jspdf; 
+        const doc = new jsPDF({ orientation: 'p', unit: 'mm', format: 'a4' }); 
+        const canvas = await html2canvas(elements.a4ContentWrapper, { 
+            scale: 3, 
+            useCORS: true,
+            scrollX: 0,
+            scrollY: 0,
+            windowWidth: elements.a4ContentWrapper.scrollWidth,
+            windowHeight: elements.a4ContentWrapper.scrollHeight
+        }); 
+        // Chuyển sang định dạng JPEG để có thể nén
+        const imgData = canvas.toDataURL('image/jpeg', 0.90); // 0.90 là chất lượng (90%)
         const pdfWidth = doc.internal.pageSize.getWidth(); 
         const pdfHeight = doc.internal.pageSize.getHeight(); 
-        doc.addImage(imgData, 'PNG', 0, 0, pdfWidth, pdfHeight); 
+// Thêm ảnh với tùy chọn nén JPEG
+        doc.addImage(imgData, 'JPEG', 0, 0, pdfWidth, pdfHeight, undefined, 'FAST'); // 'FAST' hoặc 'MEDIUM' 
         doc.output('dataurlnewwindow'); 
         showToast('PDF opened in a new tab!'); 
     } catch (error) { 
         showToast('Error creating PDF. Check Console (F12).', 'error'); 
         console.error("html2canvas error (PDF Export):", error); 
-    } finally { 
+    } finally {
         elements.generatePdfBtn.disabled = false; 
         elements.generatePdfBtn.textContent = i18n.printPdf[state.currentLang]; 
-    } 
+    }
 }
 
 // --- 7. EVENT HANDLERS ---
@@ -634,18 +729,21 @@ function handleExcelImport(event) {
         try {
             const workbook = XLSX.read(new Uint8Array(e.target.result), { type: 'array' });
             const json = XLSX.utils.sheet_to_json(workbook.Sheets[workbook.SheetNames[0]]);
-            if (json.length > 0) {
-                const newProducts = json.map(item => ({ name: item['Name'], unit: item['Unit'], price: parseFloat(item['Price']) || 0 }));
-                if (confirm(i18n.confirmImport[state.currentLang].replace('{count}', newProducts.length))) {
-                    state.products = newProducts;
-                    state.products.push({ name: i18n.otherOption[state.currentLang], unit: state.currentLang === 'vi' ? 'Lần' : 'Turn', price: 0 });
-                    saveProducts();
-                    renderProductManagementTable();
-                    showToast(i18n.toastTariffUpdated[state.currentLang]);
-                }
+            if (!json || json.length === 0) {
+                showToast(i18n.toastImportNoData[state.currentLang], 'error');
+                return;
+            }
+            const newProducts = json.map(item => ({ name: item['Name'], unit: item['Unit'], price: parseFloat(item['Price']) || 0 }));
+            if (confirm(i18n.confirmImport[state.currentLang].replace('{count}', newProducts.length))) {
+                state.products = newProducts;
+                state.products.push({ name: i18n.otherOption[state.currentLang], unit: state.currentLang === 'vi' ? 'Lần' : 'Turn', price: 0 });
+                saveProducts();
+                renderProductManagementTable();
+                showToast(i18n.toastTariffUpdated[state.currentLang]);
             }
         } catch (error) {
             showToast(i18n.toastError[state.currentLang], 'error');
+            console.error("Excel import error:", error);
         } finally {
             event.target.value = '';
         }
@@ -667,7 +765,7 @@ function handleHistoryTableClick(e) {
     if (!id) return;
     if (e.target.classList.contains('view-history-btn')) {
         loadQuotation(id);
-        elements.historyModal.style.display = 'none';
+        hideModal(elements.historyModal);
     }
     if (e.target.classList.contains('delete-history-btn')) {
         if (confirm(i18n.confirmDeleteQuote[state.currentLang])) {
@@ -679,11 +777,11 @@ function handleHistoryTableClick(e) {
 
 function handleWindowClick(event) {
     if (event.target == elements.productModal) {
-        elements.productModal.style.display = 'none';
+        hideModal(elements.productModal);
         resetProductForm();
     }
     if (event.target == elements.historyModal) {
-        elements.historyModal.style.display = 'none';
+        hideModal(elements.historyModal);
     }
 }
 
@@ -692,28 +790,27 @@ function bindEvents() {
     elements.langToggleBtn.addEventListener('click', handleLangToggle);
     elements.addRowBtn.addEventListener('click', createTableRow);
     elements.tableBody.addEventListener('click', handleTableRowClick);
-    elements.tableBody.addEventListener('input', handleTableRowInput);
+    elements.tableBody.addEventListener('input', debounce(handleTableRowInput, 250));
     elements.tableBody.addEventListener('change', handleTableRowChange);
     elements.newBtn.addEventListener('click', () => resetForm(true));
     elements.saveBtn.addEventListener('click', saveQuotation);
     elements.renderPreviewBtn.addEventListener('click', renderPreviewToCanvas);
     elements.generatePdfBtn.addEventListener('click', generatePdf);
-    elements.manageProductsBtn.onclick = () => { elements.productModal.style.display = 'block'; renderProductManagementTable(); };
-    elements.closeProductModalBtn.onclick = () => { elements.productModal.style.display = 'none'; resetProductForm(); };
+    elements.manageProductsBtn.onclick = () => { showModal(elements.productModal); renderProductManagementTable(); };
+    elements.closeProductModalBtn.onclick = () => { hideModal(elements.productModal); resetProductForm(); };
     elements.cancelEditBtn.onclick = resetProductForm;
     elements.productForm.addEventListener('submit', handleProductFormSubmit);
     elements.productManagementTable.addEventListener('click', handleProductTableClick);
     elements.importExcelBtn.onclick = () => elements.excelImporter.click();
     elements.exportExcelBtn.addEventListener('click', handleExcelExport);
     elements.excelImporter.addEventListener('change', handleExcelImport);
-    elements.historyBtn.onclick = () => { elements.historyModal.style.display = 'block'; renderHistoryTable(); };
-    elements.closeHistoryModalBtn.onclick = () => { elements.historyModal.style.display = 'none'; };
+    elements.historyBtn.onclick = () => { showModal(elements.historyModal); renderHistoryTable(); };
+    elements.closeHistoryModalBtn.onclick = () => { hideModal(elements.historyModal); };
     elements.historyTableBody.addEventListener('click', handleHistoryTableClick);
     window.addEventListener('click', handleWindowClick);
 }
 
 function init(showWelcome = true) {
-    // This function is now only for setting the initial state of the page
     loadProducts();
     translateUI();
     const today = new Date();
